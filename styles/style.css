@@ -210,6 +210,60 @@ nav svg {
     fill: var(--color-font-black);
 }
 
+.scroll-down{
+    position: absolute;
+    left: 50%;
+    top: 85dvh;
+    height: 50px;
+    width: 25px;
+    border-radius: 15px;
+    border: solid 2px;
+    border-color: white;
+    display:inline-flex;
+    animation: scrolldot 1.25s
+    ease infinite, hide 0.2s ease forwards;
+    animation-delay: 0s, 10s;
+}
+
+
+.scroll-dot{
+    display: inline-block;
+    margin: auto;
+    border: solid 1.9px;
+    border-color: white;
+    border-radius: 20px;
+    height: 10px;
+    width: 10px;
+    animation: scrolldot 1.25s
+    ease infinite, hide 0.2s ease forwards;
+    animation-delay: 0s, 10s;
+}
+
+@keyframes scrolldot{
+    0%{
+        opacity: 0;
+        translate: 0 16px;
+    }
+}
+
+@keyframes hide {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+}
+
+@media(max-width:350px){
+    h1{
+        font-size: xx-large;
+    }
+
+    h3{
+        font-size: large;
+    }
+}
+
+
 @media(max-width:480px){
 
     .theme-dark .links-container{
@@ -278,7 +332,22 @@ nav svg {
         z-index: 9;
     }
 
+    .landingpage-content{
+        flex-direction: column-reverse;
+        align-items: start;
+    }
 
+    .headlines{
+        margin-left: auto;
+        margin-top: 75vh;
+    }
+
+}
+
+@media(max-width:700px){
+    .scroll-down{
+        display: none;
+    } 
 }
 
 @media(max-width:979px){
