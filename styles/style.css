@@ -21,12 +21,75 @@
 }
 
 html{
+    height: 100vh;
+    height: 100dvh;
     font-size: 1rem;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-nav{
+.landingpage{
+    overflow: hidden;
+}
+
+video.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  .fade-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+.theme-dark{
+    background-color: var(--color-bg-black);
+    color: var(--color-font-white);
+}
+
+.theme-dark .links-container{
+    color: var(--color-font-white);
+}
+
+.theme-dark .link-home{
+    color: var(--color-font-white);
+}
+
+.theme-dark svg{
+    fill: var(--color-font-white);
+}
+
+
+.theme-light{
+    background-color: var(--color-bg-white);
     color: var(--color-font-black);
+}
+
+.theme-light .links-container{
+    color: var(--color-font-black);
+}
+
+.theme-light .link-home{
+    color: var(--color-font-black);
+}
+
+.theme-light svg{
+    fill: var(--color-font-black);
+}
+
+
+nav{
     font-size: 20px;
     max-width: 1200px;
     margin-inline: auto;
@@ -37,6 +100,30 @@ nav{
     padding-block: calc(var(--spacing)*6);
 
 }  
+
+main{
+    display: flex; 
+}
+
+.landingpage-content{
+    height: 75vh;
+    flex-grow: 1;
+    font-size: 20px;
+    max-width: 1200px;
+    margin-inline: auto;
+    display: flex;
+    align-items: end;
+    margin-right: auto;
+    justify-content: space-between;
+    padding-inline: calc(var(--spacing)*4);
+    padding-block: calc(var(--spacing)*6);
+
+}  
+
+.headlines{
+    text-align: right;
+}
+
 
 nav .link-home{
     margin-right: auto;
@@ -103,6 +190,21 @@ nav svg {
 }
 
 @media(max-width:480px){
+
+    .theme-dark .links-container{
+        background-color: var(--color-bg-black);
+        color: var(--color-font-white);
+    }
+
+    .theme-light .links-container{
+        background-color: var(--color-bg-white);
+        color: var(--color-font-black);
+    }
+
+    .landingpage-content{
+        height: 80vh;
+    }
+
     .links-container{
         flex-direction: column;
         align-items: flex-start;
@@ -155,6 +257,7 @@ nav svg {
         z-index: 9;
     }
 
+
 }
 
 @media(max-width:979px){
@@ -164,3 +267,4 @@ nav svg {
 @media(max-width:1200px){
     
 }
+

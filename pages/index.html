@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style.css"> 
     <title>Portfolio | Lukas Predan</title>
+ 
 </head>
-<body>
+<body class="landingpage">
+
+    <video autoplay muted loop playsinline class="bg-video" id="bgVideo" aria-label="Background Video for the shown projects"></video>
+
     <header>
         <nav>
-
             <a href="index.html" aria-current="page" class="link-home">lukas predan</a>
 
             <input type="checkbox" id="sidebar-active">
@@ -33,6 +36,18 @@
         </nav>
     </header>
 
-
+    <main>
+        <div class="landingpage-content">
+            <div class="container" id="counter">
+                <h3 id="counter"></h3>
+            </div>                
+            <div class="headlines" id="text-right">
+                <h1 class="display-1 mb-2 text-break" id="headline"></h1>
+                <h3 id="subheadline"></h3>
+            </div>
+        </div>
+        
+    </main>
+    <script src="../script/landingspage.js"></script>
 </body>
 </html>
