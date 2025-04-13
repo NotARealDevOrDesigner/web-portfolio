@@ -89,6 +89,12 @@ video.bg-video {
     fill: var(--color-font-white);
 }
 
+.theme-dark .scroll-down{
+    border-color: var(--color-font-white);
+}
+.theme-dark .scroll-dot{
+    border-color: var(--color-font-white);
+}
 
 .theme-light{
     background-color: var(--color-bg-white);
@@ -107,6 +113,12 @@ video.bg-video {
     fill: var(--color-font-black);
 }
 
+.theme-light .scroll-down{
+    border-color: var(--color-font-black);
+}
+.theme-light .scroll-dot{
+    border-color: var(--color-font-black);
+}
 
 nav{
     z-index: 2;

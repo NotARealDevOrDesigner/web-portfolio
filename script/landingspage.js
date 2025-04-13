@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const videos = [
       "../pages/content/video/video1.webm",
-      "../pages/content/video/video2.webm",
+      "../pages/content/video/video2.mp4",
       "../pages/content/video/video3.mp4",
       "../pages/content/video/video4.webm",
       "../pages/content/video/video5.webm"
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const themes = [
         "theme-dark",
-        "theme-dark",
+        "theme-light",
         "theme-dark",
         "theme-light",
         "theme-light"
