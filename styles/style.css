@@ -90,6 +90,7 @@ video.bg-video {
 
 
 nav{
+    z-index: 2;
     font-size: 20px;
     max-width: 1200px;
     margin-inline: auto;
@@ -106,6 +107,7 @@ main{
 }
 
 .landingpage-content{
+    
     height: 75vh;
     flex-grow: 1;
     font-size: 20px;
@@ -121,6 +123,7 @@ main{
 }  
 
 .headlines{
+    z-index: -2;
     text-align: right;
 }
 
