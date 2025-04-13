@@ -27,6 +27,15 @@ html{
     font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
+h1{
+    margin-bottom: calc(var(--spacing)*4);
+}
+
+h3{
+    font-weight: 400;
+}
+
+
 .landingpage{
     overflow: hidden;
 }
@@ -107,7 +116,6 @@ main{
 }
 
 .landingpage-content{
-    
     height: 75vh;
     flex-grow: 1;
     font-size: 20px;
