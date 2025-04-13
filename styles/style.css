@@ -35,6 +35,16 @@ h3{
     font-weight: 400;
 }
 
+.click-overlay{
+    position: absolute;
+    margin-top:100px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 11;
+    cursor: pointer;
+}
 
 .landingpage{
     overflow: hidden;

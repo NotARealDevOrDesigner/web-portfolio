@@ -7,6 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
       "../pages/content/video/video5.webm"
     ];
 
+    const links = [
+      '../project-pages/kiev.html',
+      '../project-pages/feelphysics.html',
+      '../project-pages/cyber.html',
+      '../project-pages/nuilab.html',
+      '../project-pages/angst.html'
+    ]
+
+
     const counter = [
         "1 | 5",
         "2 | 5",
@@ -79,6 +88,20 @@ document.addEventListener("DOMContentLoaded", () => {
     subheadline.textContent = subheadlines[index]; // Setzt den Text sofort beim Laden
     counters.textContent = counter[index];
     applyThemeByIndex(index);
+    setClickOverlay(index);
+
+    //Clickoverlay anpassen um zu gewünschten Seite zu kommen
+
+    function setClickOverlay(index) {
+      const overlay = document.querySelector('.click-overlay');
+      if (overlay && links[index]) {
+        overlay.onclick = function () {
+          window.location.href = links[index];
+        };
+      } else {
+        console.error('Ungültiger Index oder kein Overlay gefunden.');
+      }
+    }
 
 
     //Setze Color Theme
@@ -123,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
         subheadline.textContent = subheadlines[newIndex];
         counters.textContent = counter[newIndex];
         applyThemeByIndex(newIndex);
-      
+        setClickOverlay(newIndex)
         // Blende das Overlay aus
         fadeOverlay.style.opacity = 0;
         
