@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css"> 
+    <title>Work | Lukas Predan</title>
+ 
+</head>
+<body class="workpage">
+
+
+    <header>
+        <nav>
+            <a href="index.html" aria-current="page" class="link-home">lukas predan</a>
+
+            <input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="open-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#c9c9c9"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </label>
+
+            <label id="overlay" for="sidebar-active"></label>
+
+
+            <div class="links-container">
+                <label for="sidebar-active" class="close-sidebar-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#c9c9c9"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                </label>
+
+                <a href="work.html" class="link">work</a>
+                <a href="about.html" class="link" >about</a>
+                <a href="mailto:lukaspredan@gmail.com" class="link contact">contact</a>
+                  
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-work">
+        <!--filter for project cards-->
+        <div class="filter-links-container">
+            <button class="button filter-link" data-filter="*">[All]</button>
+            <button class="button filter-link" data-filter=".product">[Product Design]</button>
+            <button class="button filter-link" data-filter=".ux">[UX Research & Design]</button>
+            <button class="button filter-link" data-filter=".haptic">[Haptic]</button>
+            <button class="button filter-link" data-filter=".creative">[Creative-Director]</button>
+            <button class="button filter-link" data-filter=".vr">[VR & 3D]</button>
+        </div>
+        <!--project cards-->
+        <div class="project-cards">
+
+            <!--card 1-->
+            <div class="card-item product" onclick="window.location.href = '../pages/project-pages/kiev.html'">
+                <div class="card-img-wrapper">
+                    <div class="card-overlay">
+                        <p class="item-short-descript">Short-Description</p>
+                    </div>
+                    <img src="../pages/content/img/work/Handle_4(EmissionBackground).png">
+                </div>
+                <div class="card-headings">
+                    <p class="semibold">Kiev 60 L-Grip</p>
+                    <div class="category-date">
+                        <p class="grey">Product Design</p>
+                        <p class="grey">2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--card 2-->
+            <div class="card-item ux" onclick="window.location.href = ''">
+                <div class="card-img-wrapper">
+                    <div class="card-overlay">
+                        <p class="item-short-descript">Short-Description</p>
+                    </div>
+                    <img src="../pages/content/img/work/Blank19.png">
+                </div>
+                <div class="card-headings">
+                    <p class="semibold">Feel Physics</p>
+                    <div class="category-date">
+                        <p class="grey nowrap">UX Research & Design</p>
+                        <p class="grey">2024</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!--card 3-->
+            <div class="card-item" onclick="window.location.href = ''">
+                <div class="card-img-wrapper">
+                    <div class="card-overlay">
+                        <p class="item-short-descript">Short-Description</p>
+                    </div>
+                    <img src="../pages/content/img/work/Blank19.png">
+                </div>
+                <div class="card-headings">
+                    <p class="semibold">Text</p>
+                    <div class="category-date">
+                        <p class="grey">Category</p>
+                        <p class="grey">0000</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--card 4-->
+            <div class="card-item" onclick="window.location.href = ''">
+                <div class="card-img-wrapper">
+                    <div class="card-overlay">
+                        <p class="item-short-descript">Short-Description</p>
+                    </div>
+                    <img src="../pages/content/img/work/Blank19.png">
+                </div>
+                <div class="card-headings">
+                    <p class="semibold">Text</p>
+                    <div class="category-date">
+                        <p class="grey">Category</p>
+                        <p class="grey">0000</p>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </main>
+
+    <script type="text/javascript">
+        var $projectcards = $(".project-cards").isotope({
+    itemSelector: '.card-item',
+    layoutMode: 'fitRows'
+})
+
+$(".filter-links-container .button").on("click", function(){
+    $(".filter-links-container .button").removeClass("active");
+    $(this).addClass("active");
+
+    var value = $(this).attr("data-filter");
+    $projectcards.isotope({
+        filter: value
+    })
+})
+    </script>
+
+    <!--   ***** scripts *****   -->
+    <script src="../script/work.js"></script>
+    <!--jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--isotope-filter-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>
