@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
     const videos = [
-      "../pages/content/video/video1.webm",
-      "../pages/content/video/video2.mp4",
-      "../pages/content/video/video3.mp4",
-      "../pages/content/video/video4.webm",
-      "../pages/content/video/video5.webm"
+      "pages/content/video/video1.webm",
+      "pages/content/video/video2.mp4",
+      "pages/content/video/video3.mp4",
+      "pages/content/video/video4.webm",
+      "pages/content/video/video5.webm"
     ];
 
     const links = [
-      '../project-pages/kiev.html',
-      '../project-pages/feelphysics.html',
-      '../project-pages/cyber.html',
-      '../project-pages/nuilab.html',
-      '../project-pages/angst.html'
+      'pages/project-pages/kiev.html',
+      'pages/project-pages/feelphysics.html',
+      'pages/project-pages/cyber.html',
+      'pages/project-pages/nuilab.html',
+      'pages/project-pages/angst.html'
     ]
 
 
@@ -33,11 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     const fallbackImages = [
-        "../pages/content/video/fallback-video1.webp",
-        "../pages/content/video/fallback-video2.webp",
-        "../pages/content/video/fallback-video3.webp",
-        "../pages/content/video/fallback-video4.webp",
-        "../pages/content/video/fallback-video5.webp"
+        "pages/content/video/fallback-video1.webp",
+        "pages/content/video/fallback-video2.webp",
+        "pages/content/video/fallback-video3.webp",
+        "pages/content/video/fallback-video4.webp",
+        "pages/content/video/fallback-video5.webp"
       ];
     
 
