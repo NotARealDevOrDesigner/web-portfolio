@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css"> 
+    <title>Portfolio | Lukas Predan</title>
+ 
+</head>
+<body class="landingpage">
+
+    <video autoplay muted loop playsinline class="bg-video" id="bgVideo" aria-label="Background Video for the shown projects"></video>
+
+    <div class="click-overlay" onclick="window.location.href = 'work.html'">
+    </div>
+
+    <header>
+        <nav>
+            <a href="index.html" aria-current="page" class="link-home">lukas predan</a>
+
+            <input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="open-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#c9c9c9"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </label>
+
+            <label id="overlay" for="sidebar-active"></label>
+
+
+            <div class="links-container">
+                <label for="sidebar-active" class="close-sidebar-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#c9c9c9"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                </label>
+
+                <a href="pages/work.html" class="link">work</a>
+                <a href="pages/about.html" class="link" >about</a>
+                <a href="mailto:lukaspredan@gmail.com" class="link contact">contact</a>
+                  
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="landingpage-content">
+            <div class="container" id="counter">
+                <h3 id="counter"></h3>
+            </div>   
+            
+            <div class="scroll-down">
+                <div class="scroll-dot"></div>
+            </div>
+
+            <div class="headlines" id="text-right">
+                    <h1 class="display-1 mb-2 text-break" id="headline"></h1>
+                    <h3 id="subheadline"></h3>
+            </div>
+        </div>
+        
+    </main>
+    <script src="script/landingspage.js"></script>
+</body>
+</html>
