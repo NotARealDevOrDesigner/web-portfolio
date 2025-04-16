@@ -1,39 +1,52 @@
 document.addEventListener("DOMContentLoaded", () => {
   const checkbox = document.getElementById("filter-active");
   const filterLinks = document.querySelector(".filter-links");
+  const filterTabOut = document.querySelector(".filter-tab-out");
   const mediaQuery = window.matchMedia("(max-width: 1050px)");
 
-  // Funktion zur Steuerung des Dropdowns
   function toggleDropdown() {
     if (checkbox.checked) {
       filterLinks.style.maxHeight = filterLinks.scrollHeight + "px";
       filterLinks.style.opacity = 1;
+
+      if (filterTabOut) {
+        filterTabOut.style.display = "inline";
+      }
     } else {
       filterLinks.style.maxHeight = "0px";
       filterLinks.style.opacity = 0;
+
+      if (filterTabOut) {
+        filterTabOut.style.display = "none";
+      }
     }
   }
 
-  // Initial + bei Änderung
   function handleMediaQuery(e) {
     if (e.matches) {
-      // Aktivieren
       checkbox.addEventListener("change", toggleDropdown);
-      toggleDropdown(); // Zustand sofort anwenden
+      toggleDropdown();
+
+      if (filterTabOut) {
+        filterTabOut.addEventListener("click", () => {
+          checkbox.checked = false;
+          toggleDropdown();
+        });
+      }
     } else {
-      // Reset + Deaktivieren
       checkbox.removeEventListener("change", toggleDropdown);
       filterLinks.style.maxHeight = "";
       filterLinks.style.opacity = "";
+
+      if (filterTabOut) {
+        filterTabOut.style.display = "";
+      }
     }
   }
 
-  // Initial prüfen
   handleMediaQuery(mediaQuery);
-  // Bei Fenstergrößenwechsel neu prüfen
   mediaQuery.addEventListener("change", handleMediaQuery);
 });
-
 
 
 document.addEventListener("DOMContentLoaded", function () {

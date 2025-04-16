@@ -306,6 +306,9 @@ nav svg {
     display: none;
 }
 
+.filter-tab-out {
+    display: none;
+  }
 .mobile-category-filter svg{
     color: var(--color-font-black)
 }
@@ -592,6 +595,7 @@ nav svg {
 
     /* Work Page */
     .main-work{
+        margin-top: 0;
         flex-direction: column;
     }
     .project-cards{
@@ -622,7 +626,14 @@ nav svg {
         
     }
 
-
+    .filter-tab-out{
+        z-index: 7;
+        position: absolute;
+        top: 24rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 
 
 }
