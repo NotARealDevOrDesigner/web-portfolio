@@ -80,8 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
     video.appendChild(firstSource);  // Füge das erste Video hinzu
     video.poster = fallbackImages[index];  // Dynamisch das Poster-Bild setzen
     video.load();
-    video.play();
-    
+    video.play().catch(err => {
+      console.warn("Video konnte nicht abgespielt werden:", err);
+    });
     
     // Setze den ersten Text sofort nach dem Laden der Seite
     headline.textContent = headlines[index];
@@ -140,7 +141,9 @@ document.addEventListener("DOMContentLoaded", () => {
         video.appendChild(newSource);
         video.poster = fallbackImages[newIndex];  // Dynamisch das Poster-Bild setzen
         video.load();
-        video.play();
+        video.play().catch(err => {
+          console.warn("Video konnte nicht abgespielt werden:", err);
+        });
   
         headline.textContent = headlines[newIndex];
         subheadline.textContent = subheadlines[newIndex];
