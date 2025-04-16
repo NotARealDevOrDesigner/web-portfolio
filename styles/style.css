@@ -320,6 +320,21 @@ nav svg {
 /* Work Page */
 
 
+.main{
+    margin-top: 4rem;
+    z-index: 2;
+    max-width: 1200px;
+    height: fit-content;
+    margin-inline: auto;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    padding-inline: calc(var(--spacing)*4);
+    padding-block: calc(var(--spacing)*6);
+}
+
+
+
 
 .main-work{
     margin-top: 4rem;
@@ -497,6 +512,43 @@ nav svg {
       opacity: 0;
       visibility: hidden;
     }
+}
+
+/* Imprint */
+.imprint {
+    display:flex;
+    flex-direction: column;
+    color: var(--color-font-black);
+    
+}
+
+.imprint h1 {
+    color: var(--color-font-black);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.imprint p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.imprint strong {
+    font-weight: 600;
+    color: var(--color-font-black); 
+}
+
+.imprint a {
+    color: var(--color-font-black); 
+    text-decoration: none;
+}
+
+.imprint a:hover {
+    text-decoration: underline;
+}
+
+.imprint p + p {
+    margin-top: 15px;
 }
 
 @media(max-width:350px){
