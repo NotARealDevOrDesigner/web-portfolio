@@ -4,21 +4,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterTabOut = document.querySelector(".filter-tab-out");
   const mobileFilter = document.querySelector(".mobile-category-filter");
   const mediaQuery = window.matchMedia("(max-width: 1050px)");
+  
+
+  let flipped = true;
+
+  function flipIcon() {
+    const icon = document.querySelector('.category-svg');
+    flipped = !flipped;
+  
+    icon.style.transition = 'transform 0.3s ease';
+    icon.style.transform = flipped ? 'rotate(180deg)' : 'rotate(0deg)';
+  }
 
   function toggleDropdown() {
     if (checkbox.checked) {
       filterLinks.style.maxHeight = filterLinks.scrollHeight + "px";
       filterLinks.style.opacity = 1;
-
-
+      flipIcon();
+      
       if (filterTabOut) {
         filterTabOut.style.display = "inline";
       }
-
+      
     } else {
       filterLinks.style.maxHeight = "0px";
       filterLinks.style.opacity = 0;
-
+      flipIcon();
+   
       if (filterTabOut) {
         filterTabOut.style.display = "none";
       }

@@ -361,7 +361,17 @@ nav svg {
     display: none;
   }
 .mobile-category-filter svg{
-    color: var(--color-font-black)
+    color: var(--color-font-black);
+}
+    
+
+.category-svg{
+    transition: 0.4s;
+
+}
+
+.rotate{
+    transform:rotate(180deg);
 }
 
 .filter-links{
