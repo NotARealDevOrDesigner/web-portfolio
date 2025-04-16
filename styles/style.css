@@ -37,6 +37,8 @@ h3{
 }
 
 .click-overlay{
+    display: inline;
+    background-color: red;
     position: absolute;
     margin-top:100px;
     left: 0;
@@ -423,6 +425,10 @@ nav svg {
 
 @media(max-width:480px){
 
+    .click-overlay{
+        z-index: 8;
+    }
+
     .theme-dark .links-container{
         background-color: var(--color-bg-black);
         color: var(--color-font-white);
@@ -481,6 +487,7 @@ nav svg {
     }
 
     #sidebar-active:checked ~ #overlay{
+        background-color: blue;
         height: 100%;
         width: 100%;
         position: fixed;
@@ -488,6 +495,7 @@ nav svg {
         left: 0;
         z-index: 9;
     }
+
 
     .landingpage-content{
         flex-direction: column-reverse;
