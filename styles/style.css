@@ -747,7 +747,7 @@ ul.text-privacy li {
     }
 
     .landingpage-content{
-        height: 70vh;
+        height: 60vh;
     }
 
     .links-container{
@@ -807,9 +807,12 @@ ul.text-privacy li {
     }
     .headlines{
         margin-left: auto;
-        margin-top: 60vh;
+        margin-top: 40vh;
     }
 
+    .container{
+        padding-bottom: 2rem;
+    }
     /* Work Page */
 
 
