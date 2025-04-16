@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const checkbox = document.getElementById("filter-active");
   const filterLinks = document.querySelector(".filter-links");
   const filterTabOut = document.querySelector(".filter-tab-out");
+  const mobileFilter = document.querySelector(".mobile-category-filter");
   const mediaQuery = window.matchMedia("(max-width: 1050px)");
 
   function toggleDropdown() {
@@ -9,9 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
       filterLinks.style.maxHeight = filterLinks.scrollHeight + "px";
       filterLinks.style.opacity = 1;
 
+
       if (filterTabOut) {
         filterTabOut.style.display = "inline";
       }
+
     } else {
       filterLinks.style.maxHeight = "0px";
       filterLinks.style.opacity = 0;
@@ -19,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (filterTabOut) {
         filterTabOut.style.display = "none";
       }
+
     }
   }
 
