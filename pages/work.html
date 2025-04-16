@@ -7,8 +7,7 @@
     <title>Work | Lukas Predan</title>
  
 </head>
-<body class="workpage">
-
+<body class="workpage bg-white">
 
     <header>
         <nav>
@@ -22,13 +21,13 @@
             <label id="overlay" for="sidebar-active"></label>
 
 
-            <div class="links-container">
+            <div class="links-container bg-mobile-white">
                 <label for="sidebar-active" class="close-sidebar-button">
                     <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#c9c9c9"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
                 </label>
 
-                <a href="work.html" class="link">work</a>
-                <a href="about.html" class="link" >about</a>
+                <a href="pages/work.html" class="link">work</a>
+                <a href="pages/about.html" class="link" >about</a>
                 <a href="mailto:lukaspredan@gmail.com" class="link contact">contact</a>
                   
             </div>
@@ -38,18 +37,32 @@
     <main class="main-work">
         <!--filter for project cards-->
         <div class="filter-links-container">
+
+            <div class="mobile-category-filter">
+            <p class="nowrap">[Project Category]</p>
+            <input type="checkbox" id="filter-active">
+            <label for="filter-active" class="open-filter-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"><path d="M480-373.85 303.85-549.59h352.3L480-373.85Z"/></svg>
+            </label>
+            </div>
+
+            <div class="filter-links">
             <button class="button filter-link active" data-filter="*">[All]</button>
             <button class="button filter-link" data-filter=".product">[Product Design]</button>
             <button class="button filter-link" data-filter=".ux">[UX Research & Design]</button>
             <button class="button filter-link" data-filter=".haptic">[Haptic]</button>
             <button class="button filter-link" data-filter=".creative">[Creative-Director]</button>
             <button class="button filter-link" data-filter=".vr">[VR & 3D]</button>
+            </div>
+
+
+
         </div>
         <!--project cards-->
         <div class="project-cards">
 
             <!--card 1-->
-            <div class="card-item product" onclick="window.location.href = '../pages/project-pages/kiev.html'">
+            <div class="card-item product" data-category="product" onclick="window.location.href = '../pages/project-pages/kiev.html'">
                 <div class="card-img-wrapper">
                     <div class="card-overlay">
                         <p class="item-short-descript">Short-Description</p>
@@ -58,15 +71,13 @@
                 </div>
                 <div class="card-headings">
                     <p class="semibold">Kiev 60 L-Grip</p>
-                    <div class="category-date">
-                        <p class="grey">Product Design</p>
-                        <p class="grey">2024</p>
-                    </div>
+                    <p class="grey">Product Design</p>
+                    <p class="grey">2024</p>
                 </div>
             </div>
 
             <!--card 2-->
-            <div class="card-item ux" onclick="window.location.href = ''">
+            <div class="card-item ux" data-category="ux" onclick="window.location.href = ''">
                 <div class="card-img-wrapper">
                     <div class="card-overlay">
                         <p class="item-short-descript">Short-Description</p>
@@ -75,15 +86,13 @@
                 </div>
                 <div class="card-headings">
                     <p class="semibold">Feel Physics</p>
-                    <div class="category-date">
-                        <p class="grey nowrap">UX Research & Design</p>
-                        <p class="grey">2024</p>
-                    </div>
+                    <p class="grey nowrap">UX Research & Design</p>
+                    <p class="grey">2024</p>
                 </div>
             </div>
             
             <!--card 3-->
-            <div class="card-item" onclick="window.location.href = ''">
+            <div class="card-item haptic" data-category="haptic" onclick="window.location.href = ''">
                 <div class="card-img-wrapper">
                     <div class="card-overlay">
                         <p class="item-short-descript">Short-Description</p>
@@ -92,15 +101,13 @@
                 </div>
                 <div class="card-headings">
                     <p class="semibold">Text</p>
-                    <div class="category-date">
-                        <p class="grey">Category</p>
-                        <p class="grey">0000</p>
-                    </div>
+                    <p class="grey">Category</p>
+                    <p class="grey">0000</p>
                 </div>
             </div>
 
             <!--card 4-->
-            <div class="card-item" onclick="window.location.href = ''">
+            <div class="card-item creative" data-category="creative" onclick="window.location.href = ''">
                 <div class="card-img-wrapper">
                     <div class="card-overlay">
                         <p class="item-short-descript">Short-Description</p>
@@ -109,10 +116,8 @@
                 </div>
                 <div class="card-headings">
                     <p class="semibold">Text</p>
-                    <div class="category-date">
-                        <p class="grey">Category</p>
-                        <p class="grey">0000</p>
-                    </div>
+                    <p class="grey">Category</p>
+                    <p class="grey">0000</p>
                 </div>
             </div>
 
@@ -120,22 +125,7 @@
         </div>
     </main>
 
-    <script type="text/javascript">
-        var $projectcards = $(".project-cards").isotope({
-    itemSelector: '.card-item',
-    layoutMode: 'fitRows'
-})
 
-$(".filter-links-container .button").on("click", function(){
-    $(".filter-links-container .button").removeClass("active");
-    $(this).addClass("active");
-
-    var value = $(this).attr("data-filter");
-    $projectcards.isotope({
-        filter: value
-    })
-})
-    </script>
 
     <!--   ***** scripts *****   -->
     <script src="../script/work.js"></script>

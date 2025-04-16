@@ -11,7 +11,7 @@
     --color-font-white: oklch(0.93 0 0);
     --color-font-grey: oklch(0.49 0 0);
 
-    --color-bg-white:oklch(0.97 0 0);
+    --color-bg-white:oklch(0.99 0 0);
     --color-bg-black:oklch(0.14 0 0);
     --color-bg-deep-black:oklch(0 0 0);
 }
@@ -73,6 +73,12 @@ video.bg-video {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
   }
+
+.bg-white{
+    background-color: var(--color-bg-white);
+}
+
+
 
 .semibold{
     font-weight: 600;
@@ -150,6 +156,8 @@ nav{
 main{
     display: flex; 
 }
+
+    /* Landing Page */
 
 .landingpage-content{
     height: 75vh;
@@ -269,6 +277,8 @@ nav svg {
 
 /* Work Page */
 
+
+
 .main-work{
     margin-top: 4rem;
     z-index: 2;
@@ -284,12 +294,31 @@ nav svg {
 
 
 .filter-links-container{
-    padding-right: calc(var(--spacing)*10);
-    width: 13%;
+    padding-right: calc(var(--spacing)*5);
+    width: 9rem;
     display: flex;
     flex-direction: column;
     align-items: start;
     flex-shrink: 0; 
+}
+
+.mobile-category-filter{
+    display: none;
+}
+
+.mobile-category-filter svg{
+    color: var(--color-font-black)
+}
+
+.filter-links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+#filter-active{
+    display: none;
 }
 
 .filter-link{
@@ -316,6 +345,7 @@ nav svg {
 }
 
 .project-cards{
+    margin-left: 20px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -325,6 +355,19 @@ nav svg {
 
 }
 
+.card-item {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 1;
+    transform: scale(1);
+
+  }
+  
+  .card-item.hide {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+  }
+  
 
 .project-cards .card-item{
     font-size: calc(var(--spacing) * 4);
@@ -348,7 +391,7 @@ nav svg {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
     overflow: hidden;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     opacity: 0;
 }
 
@@ -423,7 +466,7 @@ nav svg {
 
 
 @media(max-width:480px){
-
+    /* Landing Page */
     .click-overlay{
         z-index: 8;
     }
@@ -445,10 +488,8 @@ nav svg {
     .links-container{
         flex-direction: column;
         align-items: flex-start;
- 
-        gap: calc(var(--spacing) * 4);
-        
 
+        gap: calc(var(--spacing) * 4);
         position: fixed;
         top: 0;
         right: -100%;
@@ -499,31 +540,35 @@ nav svg {
         flex-direction: column-reverse;
         align-items: start;
     }
-
     .headlines{
         margin-left: auto;
         margin-top: 60vh;
     }
 
+    /* Work Page */
+
+
+
+    .bg-mobile-white{
+        background-color: var(--color-bg-white);
+    }
+
+
 }
 
 @media(max-width:700px){
+    /* Landing Page */
     .scroll-down{
         display: none;
     } 
-}
 
-@media(max-width:979px){
-    
-}
-
-@media(max-width:1050px){
+    /* Work Page */
     .project-cards{
         display: flex;
         flex-direction: column;
-
+    
     }
-
+    
     .project-cards .card-item{
         width: 100%;
         font-size: calc(var(--spacing) * 4);
@@ -531,6 +576,69 @@ nav svg {
     }
 }
 
+@media(max-width:979px){
+    
+}
+
+@media(max-width:1050px){
+
+    .filter-links {
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+      }
+
+
+    /* Work Page */
+    .main-work{
+        flex-direction: column;
+    }
+    .project-cards{
+        margin-left: 0;
+
+    }
+
+    .filter-links-container{
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .filter-links{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+        opacity: 0;
+    }
+
+
+    .mobile-category-filter{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        
+    }
+
+
+
+
+}
+
 @media(max-width:1200px){
     
+}
+/*
+.project-cards{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.project-cards .card-item{
+    width: 100%;
+    font-size: calc(var(--spacing) * 4);
+    margin-bottom: calc(var(--spacing)*5);
 }
