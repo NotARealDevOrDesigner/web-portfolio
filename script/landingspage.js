@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     const links = [
-      'pages/project-pages/kiev.html',
-      'pages/project-pages/feelphysics.html',
-      'pages/project-pages/cyber.html',
-      'pages/project-pages/nuilab.html',
-      'pages/project-pages/angst.html'
+      'pages/kiev.html',
+      'pages/feelphysics.html',
+      'pages/cyber.html',
+      'pages/nuilab.html',
+      'pages/angst.html'
     ]
 
 
