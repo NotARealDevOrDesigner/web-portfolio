@@ -79,10 +79,18 @@ document.addEventListener("DOMContentLoaded", () => {
     video.innerHTML = "";  // Entferne alte Quellen (falls vorhanden)
     video.appendChild(firstSource);  // Füge das erste Video hinzu
     video.poster = fallbackImages[index];  // Dynamisch das Poster-Bild setzen
+    video.muted = true;
     video.load();
-    video.play().catch(err => {
-      console.warn("Video konnte nicht abgespielt werden:", err);
-    });
+    video.oncanplay = () => {
+      video.play().catch(err => {
+        console.warn("Autoplay fehlgeschlagen:", err);
+      });
+    };
+    
+    //debug
+    const v = document.querySelector('#bgVideo');
+    v.muted = true;
+    v.play().catch(e => console.log('Fehler beim Play:', e));
     
     // Setze den ersten Text sofort nach dem Laden der Seite
     headline.textContent = headlines[index];
@@ -140,10 +148,13 @@ document.addEventListener("DOMContentLoaded", () => {
         video.innerHTML = ""; // Entfernt alte Quellen
         video.appendChild(newSource);
         video.poster = fallbackImages[newIndex];  // Dynamisch das Poster-Bild setzen
+        video.muted = true;
         video.load();
-        video.play().catch(err => {
-          console.warn("Video konnte nicht abgespielt werden:", err);
-        });
+        video.oncanplay = () => {
+          video.play().catch(err => {
+            console.warn("Autoplay fehlgeschlagen:", err);
+          });
+        };
   
         headline.textContent = headlines[newIndex];
         subheadline.textContent = subheadlines[newIndex];
