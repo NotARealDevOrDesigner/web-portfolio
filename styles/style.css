@@ -537,7 +537,6 @@ nav svg {
     max-width: 1200px;
     margin-inline:auto;
     padding-inline: calc(var(--spacing)*4);
-    padding-block: calc(var(--spacing)*6);
 }
 
 .hero-section{
@@ -557,12 +556,11 @@ nav svg {
     left: 0;
     width: 100%;
     height: 95vh;
-    background-image: url('/pages/content/img/kiev/hero-section.jpg');
+
     background-size: cover;
     background-position: bottom;
     z-index: -2;
 }
-
 
 .hero-content{
     position: relative;;
@@ -576,39 +574,187 @@ nav svg {
 
 .problem-section{
     width: 100%;
+    height: 100vh;
+
 }
 
 .problem-bg{
-    padding-top: calc(var(--spacing)*25);
     width: 100%;
-    height: 100vh;
-    background-image: url('/pages/content/img/kiev/problem-section.png');
+    height: 100%;
+
     background-size: cover;
     background-position: bottom;
     z-index: -2;
 }
 
 .problem-content{
-    height: 100;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between
 }
 
 .problem-heading{
+
+    padding-top: calc(var(--spacing)*25);
     width: 100%;
-    background-color: red;
-    
 }
 
-.problem-text{
-    background-color: blue;
-    width: 100%;
+.problem-heading h2{
+    font-weight: 400;
+    font-size: 32px ;
+}
+
+.problem-text-wrapper{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    padding-bottom: calc(var(--spacing)*25);
 }
 
+.problem-text{
+    text-align: right;
+    max-width: 400px;
+}
+
+.problem-text h2{
+    font-weight: 400;
+    font-size: 24px ;
+}
+
+.design-section{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+
+.design-heading{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: calc(var(--spacing)*25);
+    width: 100%;
+    padding-bottom: calc(var(--spacing)*25);
+}
+
+.design-heading h2{
+    font-weight: 400;
+    font-size: 32px ;
+}
+
+.design-bg{
+    position: absolute;
+    top: 115vh;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    background-size: cover;
+    background-position: bottom;
+    z-index: 0;
+}
+
+
+.design-content-img1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+}
+
+.design-content-img1 img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.design-content-icons{
+    padding-top: calc(var(--spacing)*50);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.design-content-icons .horizontal{
+    max-width: 255px;
+    padding-bottom: calc(var(--spacing)*12);
+}
+
+.design-content-icons .vertical{
+    max-width: 180px;
+    padding-bottom: calc(var(--spacing)*12);
+}
+
+.design-content-icons h2{
+    font-weight: 400;
+    font-size: 24px ;
+    padding-bottom: calc(var(--spacing)*12);
+}
+
+
+.design-text-wrapper{
+    margin-top: calc(var(--spacing)*50);
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding-bottom: calc(var(--spacing)*25);
+}
+
+.design-text-wrapper video{
+    max-width: 600px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.design-text h2{
+    font-weight: 400;
+    font-size: 24px ;
+}
+
+.design-text p{
+    word-break: break-word;
+    max-width: 390px;
+}
+
+.design-text{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    text-align: right;
+
+}
+
+.design-text .horizontal{
+
+    max-width: 400px;
+    padding-bottom: calc(var(--spacing)*12);
+}
+
+
+/* Content Project-Sites */
+
+
+
+.kiev-bg {
+    background-image: url('../pages/content/img/kiev/hero-section.jpg');
+}
+
+.kiev-pb{
+    background-image: url('../pages/content/img/kiev/problem-section.png');
+}
+
+.kiev-ds{
+    background-image: url('../pages/content/img/kiev/design-section.png');
+}
+
+
+
+.kiev-bg-color{
+    background-color: #000;
+}
 
 
 /* Imprint */
@@ -822,6 +968,26 @@ ul.text-privacy li {
     }
 
 
+
+    /* Project Page */
+
+    .problem-heading{
+
+        padding-top: calc(var(--spacing)*12);
+        width: 100%;
+    }
+    
+    .problem-text-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-bottom: calc(var(--spacing)*12);
+    }
+
+    .problem-text{
+        text-align: left;
+        max-width: 100%;
+    }
 }
 
 @media(max-width:700px){

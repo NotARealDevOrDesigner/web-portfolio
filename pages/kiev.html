@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css"> 
     <title>Kiev 60 | Lukas Predan</title>
  
@@ -36,7 +37,7 @@
 
     <main class="flex-col">
         <div class="hero-section">
-            <div class="hero-bg"></div>
+            <div class="hero-bg kiev-bg"></div>
                 <div class="hero-content max1200">
                     <h1>Kiev 60 L-Grip</h1>
                         <h3>Rethink soviet design and outdated ergonomics</h3>
@@ -44,23 +45,70 @@
         </div>
 
         <div class="problem-section">
-            <div class="problem-bg">
+            <div class="problem-bg kiev-pb kiev-bg-color">
                 <div class="problem-content max1200">
-
+                    
                     <div class="problem-heading">
-                        <h2>problem</h2>
+                        <h2 data-aos="fade-right"  data-aos-duration="500">problem</h2>
                     </div>
-
-                    <div class="problem-text">
-                        <p>Heading</p>
-                        <p>Subheading</p>
+                    <div class="problem-text-wrapper">
+                        <div data-aos="fade-up-left"  data-aos-duration="500" class="problem-text">
+                            <h2>handling & usability</h2>
+                            <p>At nearly 2 kg, the Kiev 60 is bulky and uncomfortable for handheld use. Unlike other medium format cameras of its time, it lacked L-grip options to improve handling. This design oversight makes extended shooting a challenge
+                                —one that calls for a better solution.</p>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
 
-        <div class="design-section">
+        <div class="design-section kiev-bg-color">
+                <div class="design-content max1200">
+
+                    <div  data-aos="fade-left"  data-aos-duration="500" class="design-heading">
+                        <h2>design</h2>
+                    </div>
+
+                    <div class="design-content-img1">
+                        <div >
+                            <img data-aos="fade-up-right"  data-aos-duration="500" src="../pages/content/img/kiev/analog1.png" alt="">
+                            <img data-aos="fade-up-right"  data-aos-duration="800" src="../pages/content/img/kiev/analog2.png" alt="">
+                        </div>
+                        <img data-aos="fade-up-left"  data-aos-duration="1000"src="../pages/content/img/kiev/analog3.png" alt="">
+                    </div>
+
+                    <div class="design-bg kiev-ds"></div>
+
+
+                    <div class="design-content-icons">
+                        <h2  data-aos="fade-up-right"  data-aos-duration="1000">holding positions</h2>
+                       <img  data-aos="fade-up-right"  data-aos-duration="1500"class="vertical" src="../pages/content/img/kiev/kiev-icon1.png" alt="ergonomics icon">
+                       <img  data-aos="fade-up-right"  data-aos-duration="1800"class="horizontal"src="../pages/content/img/kiev/kiev-icon2.png" alt="ergonomics vertical icon">             
+                    </div>
+
+
+                    <div class="design-text-wrapper">
+
+                        <video data-aos="fade-up-right" data-aos-duration="1000" autoplay muted loop playsinline class="design-text-wrapper-video" aria-label="animtation for film storage">
+                            <source src="../pages/content/video/FilmFeature.mp4" type="video/mp4">
+                        </video>
+
+
+                        <div class="design-text">
+
+                            <img data-aos="fade-up-left" data-aos-duration="1000" class="horizontal" src="../pages/content/img/kiev/kiev-icon3.png" alt="parts icon"> 
+
+                            <h2 data-aos="fade-up-left" data-aos-duration="1500">ergonomics & aesthetics</h2>
+                            <p data-aos="fade-up-left" data-aos-duration="1800">The L-grip is designed to enhance the Kiev 60's usability while maintaining its iconic aesthetic. The grip's contours are carefully crafted to fit the hand, providing a comfortable and secure hold. The design is minimalistic, ensuring that it complements the camera's vintage look without overwhelming it.</p>
+                        </div>
+                    </div>
+
+                    <div class="design-content-img2">
+                        <img data-aos="fade-up-right"  data-aos-duration="500" src="../pages/content/img/kiev/analog4.png" alt="">
+                        <img data-aos="fade-up-right"  data-aos-duration="800" src="../pages/content/img/kiev/analog5.png" alt="">
+                    </div>
+
+            </div>
         </div>
 
         <div class="solution-section">
@@ -107,6 +155,10 @@
 
     <!--   ***** scripts *****   -->
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
 </body>
 </html>
