@@ -643,11 +643,11 @@ nav svg {
 
 .design-bg{
     position: absolute;
-    top: 115vh;
-    left: 50%;
-    width: 30%;
-    height: 30%;
-    background-size: cover;
+    top: 130vh;
+    left: 40%;
+    width: 40%;
+    height: 20%;
+    background-size:cover;
     background-position: bottom;
     z-index: 0;
 }
@@ -733,6 +733,18 @@ nav svg {
     padding-bottom: calc(var(--spacing)*12);
 }
 
+.design-content-img2{
+    margin-top: calc(var(--spacing)*50);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: calc(var(--spacing)*50);
+}
+
+.design-content-img2 img{
+    width: 48%;
+}
 
 /* Content Project-Sites */
 
