@@ -339,6 +339,7 @@ nav svg {
 
 
 .main-work{
+    background-image: yellow;
     margin-top: 4rem;
     z-index: 2;
     max-width: 1200px;
@@ -353,8 +354,9 @@ nav svg {
 
 
 .filter-links-container{
-    padding-right: calc(var(--spacing)*5);
-    width: 9rem;
+    padding-right: calc(var(--spacing)*6);
+    background-color: red;
+    width: 9em;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -409,7 +411,7 @@ nav svg {
 
 
 .filter-link.active{
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 .filter-link:hover{
@@ -417,6 +419,7 @@ nav svg {
 }
 
 .project-cards{
+    background-color: greenyellow;
     margin-left: 20px;
     display: flex;
     justify-content: space-between;
@@ -498,6 +501,9 @@ nav svg {
 }
 
 .card-img-wrapper{
+    display: block;
+    width: 100%;
+    height: 56.25%;
     overflow: hidden;
     position: relative;
     width: 100%;
