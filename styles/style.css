@@ -780,23 +780,41 @@ nav svg {
 
 /* About */
 
+.flex-row{
+
+}
+
+.about-mobile-img{
+    display: none;
+}
 
 .img-about-wrapper{
-    background-color: red;
+
     padding-top: 4rem;
-    width: 40%;
-    
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;    
 }
 
 .img-about-wrapper img{
-    width: 80%;
+    display: block;
+    max-width: 25em;
+    object-fit: cover;
 }
 
 .text-about{
-
-    padding-top:  4rem;;
-    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
 }
+
+.text-about-wrapper{
+
+    padding-top:  4rem;
+}
+
+
 
 .text-about h1{
     font-size: 48px;
@@ -819,6 +837,53 @@ nav svg {
     color: var(--color-font-black);
     text-decoration: underline;
     padding-right: calc(var(--spacing)*6);
+    white-space: nowrap;
+}
+
+.experience-education{
+    /*background-color: teal;*/
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+.experience-heading{
+    font-size: 40px;
+}
+
+.education-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.education-item{
+    margin-block: calc(var(--spacing)*6);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    align-content: space-between;
+    flex-wrap:wrap;
+}
+
+.education-item-work{
+    width: 30%;
+    white-space: nowrap;
+}
+
+
+
+.education-item-time{
+    align-self: end;
+    white-space: nowrap;
+    width: 28%;
+
+}
+
+
+.education-item-about{
+    width: 42%;
 }
 
 /* Imprint */
@@ -1052,6 +1117,33 @@ ul.text-privacy li {
         text-align: left;
         max-width: 100%;
     }
+
+
+
+    /* About Page */
+
+    .about-mobile-img{
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+        border-radius: 100%;
+        margin-bottom: calc(var(--spacing)*10);
+    }
+
+    .text-about-wrapper h2{
+        font-size: 20px !important;
+    }
+
+    .experience-education{
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .cv-links {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing)*4);
+    }
 }
 
 @media(max-width:700px){
@@ -1100,7 +1192,27 @@ ul.text-privacy li {
 
 
 @media(max-width:979px){
+    /* About Page*/
+
+    .mobile-col-979{
+        flex-direction: column;
+    }
+
+    .about-mobile-img{
+        display: block;
+        max-width: 250px;
+        max-height: 250px;
+        object-fit: cover;
+        border-radius: 100%;
+        margin-bottom: calc(var(--spacing)*10);
+    }
     
+    .img-about-wrapper{
+        display: none;
+    }
+    .text-about-wrapper h2{
+    padding-bottom: 10%;
+    }
 }
 
 @media(max-width:1050px){
@@ -1168,7 +1280,40 @@ ul.text-privacy li {
         height: 100%;
     }
 
+     /* About Page */
 
+     .education-item-work p{
+        padding-bottom: calc(var(--spacing)*1) ;
+    }
+
+    .education-item-work h3{
+        padding-bottom: calc(var(--spacing)*1) ;
+    }
+
+    .education-item-time{
+        color:var(--color-font-grey);
+        padding-bottom: calc(var(--spacing)*4) ;
+    }
+
+
+    .education-item-work{
+        width: 100%;
+    }
+
+    .education-item-time{
+        width: 100%;
+    }
+
+    .education-item-about{
+        align-self: self-start;
+        width: 100%;
+    }
+
+
+
+     .education-item{
+        flex-direction: column;
+     }
 }
 
 @media(max-width:1200px){
