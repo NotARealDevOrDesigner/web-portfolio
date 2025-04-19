@@ -536,6 +536,13 @@ nav svg {
 
 }
 
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
 .max1200{
     max-width: 1200px;
     margin-inline:auto;
@@ -771,6 +778,48 @@ nav svg {
     background-color: #000;
 }
 
+/* About */
+
+
+.img-about-wrapper{
+    background-color: red;
+    padding-top: 4rem;
+    width: 40%;
+    
+}
+
+.img-about-wrapper img{
+    width: 80%;
+}
+
+.text-about{
+
+    padding-top:  4rem;;
+    width: 40%;
+}
+
+.text-about h1{
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.text-about h2{
+
+    padding-top: calc(var(--spacing)*6) ;
+    font-size: 24px;
+    font-weight: 400;
+    padding-bottom: 30%;
+}
+
+.strong-about{
+    font-weight: 600;
+}
+
+.cv-links a{
+    color: var(--color-font-black);
+    text-decoration: underline;
+    padding-right: calc(var(--spacing)*6);
+}
 
 /* Imprint */
 .imprint {
