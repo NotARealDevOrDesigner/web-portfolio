@@ -339,7 +339,6 @@ nav svg {
 
 
 .main-work{
-    background-image: yellow;
     margin-top: 4rem;
     z-index: 2;
     max-width: 1200px;
@@ -355,7 +354,6 @@ nav svg {
 
 .filter-links-container{
     padding-right: calc(var(--spacing)*6);
-    background-color: red;
     width: 9em;
     display: flex;
     flex-direction: column;
@@ -419,7 +417,6 @@ nav svg {
 }
 
 .project-cards{
-    background-color: greenyellow;
     margin-left: 20px;
     display: flex;
     justify-content: space-between;
