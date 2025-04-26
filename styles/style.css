@@ -54,6 +54,9 @@ h3{
     background-color: var(--color-bg-white);
 }
 
+.bg-black{
+    background-color: var(--color-bg-black);
+}
 
 
 .semibold{
@@ -66,6 +69,14 @@ h3{
 
 .grey{
     color: var(--color-font-grey);
+}
+
+.font-white{
+    color: var(--color-font-white);
+}
+
+.font-black{
+    color: var(--color-font-black);
 }
 
 .theme-dark{
@@ -533,7 +544,6 @@ nav svg {
 .flex-col{
     display: flex;
     flex-direction: column;
-
 }
 
 .flex-row{
@@ -605,7 +615,6 @@ nav svg {
 }
 
 .problem-heading{
-
     padding-top: calc(var(--spacing)*25);
     width: 100%;
 }
@@ -651,19 +660,28 @@ nav svg {
     font-size: 32px ;
 }
 
+
+
 .design-bg{
-    position: absolute;
-    top: 130vh;
-    left: 40%;
-    width: 40%;
-    height: 20%;
-    background-size:cover;
-    background-position: bottom;
-    z-index: 0;
+    display: block;
+    margin-top: calc(var(--spacing)*50);
+    width: 50%;
+}
+
+.design-bg img{
+    width: 100%;
+    object-fit: cover;
 }
 
 
+.design-kiev-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .design-content-img1{
+
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -678,18 +696,18 @@ nav svg {
 
 .design-content-icons{
     padding-top: calc(var(--spacing)*50);
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
 }
 
 .design-content-icons .horizontal{
-    max-width: 255px;
+    max-width: 50%;
     padding-bottom: calc(var(--spacing)*12);
 }
 
 .design-content-icons .vertical{
-    max-width: 180px;
+    max-width: 35%;
     padding-bottom: calc(var(--spacing)*12);
 }
 
@@ -738,8 +756,7 @@ nav svg {
 }
 
 .design-text .horizontal{
-
-    max-width: 400px;
+    max-width: 78%;
     padding-bottom: calc(var(--spacing)*12);
 }
 
@@ -756,6 +773,188 @@ nav svg {
     width: 48%;
 }
 
+.solution-section1{
+    width: 100%;
+    height: 100vh;
+}
+
+.solution1-bg{
+    width: 100%;
+    height: 100%;
+
+    background-size:cover;
+    background-position: top;
+    z-index: -2;
+}
+
+.solution-heading{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: calc(var(--spacing)*25);
+    width: 100%;
+    padding-bottom: calc(var(--spacing)*25);
+}
+
+.solution-heading h2{
+    font-weight: 400;
+    font-size: 32px ;
+}
+
+.solution-section2{
+    width: 100%;
+    height: 100vh;
+}
+
+.solution2-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.solution2-bg{
+    width: 100%;
+    height: 100%;
+
+    background-size:cover;
+    background-position: top;
+    z-index: -2;
+}
+
+.solution-text-wrapper{
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: calc(var(--spacing)*25);
+}
+
+.solution-text{
+    text-align: right;
+    max-width: 400px;
+}
+
+.solution-text h2{
+    font-weight: 400;
+    font-size: 24px ;
+}
+
+
+.solution-section3{
+    width: 100%;
+    height: 100vh;
+}
+
+.solution3-bg{
+    width: 100%;
+    height: 100%;
+
+    background-size:cover;
+    background-position: top;
+    z-index: -2;
+}
+
+.learning-heading{
+    display: flex;
+    justify-content: flex-start;
+    padding-top: calc(var(--spacing)*25);
+    width: 100%;
+    padding-bottom: calc(var(--spacing)*12);
+}
+
+.learning-heading h2{
+    font-weight: 400;
+    font-size: 32px ;
+}
+
+
+
+.learning-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: calc(var(--spacing)*25);
+}
+
+.learning-card-item{
+    width: 30%;
+}
+
+.learning-card-item h3{
+    padding-bottom: calc(var(--spacing)*4) ;
+}
+
+.learning-card-item p{
+    width: 90%;
+}
+
+.video-heading {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: calc(var(--spacing)*25);
+    width: 100%;
+    padding-bottom: calc(var(--spacing)*4);
+}
+
+.video-heading h2{
+    font-weight: 400;
+    font-size: 24px;
+
+}
+
+.video{
+ position: relative;
+ padding-bottom: 56.25%; /* 16:9 */
+ height: 0;
+ overflow: hidden;
+ margin-bottom: calc(var(--spacing)*12);
+}
+
+.video iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.link-content{
+    padding-bottom: calc(var(--spacing)*25);
+}
+
+.link-heading{
+    display: flex;
+    justify-content: flex-start;
+    padding-top: calc(var(--spacing)*25);
+    width: 100%;
+    padding-bottom: calc(var(--spacing)*12);
+}
+
+.link-heading h2{
+    font-weight: 400;
+    font-size: 32px ;
+}
+
+.link-col{
+    width: 100%;
+}
+
+.link-item{
+    display: flex;
+    flex-direction: row;
+}
+
+.link-what{
+ white-space: nowrap;
+ width: 10rem;
+ padding-bottom: calc(var(--spacing)*2);
+}
+
+.link-where{
+padding-bottom: calc(var(--spacing)*2);
+}
+
 /* Content Project-Sites */
 
 
@@ -768,11 +967,18 @@ nav svg {
     background-image: url('../pages/content/img/kiev/problem-section.png');
 }
 
-.kiev-ds{
-    background-image: url('../pages/content/img/kiev/design-section.png');
+
+.kiev-sc1{
+    background-image: url('../pages/content/img/kiev/solution-sectionbg1.png');
 }
 
+.kiev-sc2{
+    background-image: url('../pages/content/img/kiev/solution-sectionbg2.png');
+}
 
+.kiev-sc3{
+    background-image: url('../pages/content/img/kiev/solution-sectionbg3.png');
+}
 
 .kiev-bg-color{
     background-color: #000;
@@ -780,9 +986,6 @@ nav svg {
 
 /* About */
 
-.flex-row{
-
-}
 
 .about-mobile-img{
     display: none;
@@ -1192,6 +1395,38 @@ ul.text-privacy li {
 
 
 @media(max-width:979px){
+
+    /* Kiev */
+    .design-content-icons{
+        max-width: 500px;
+    }
+
+
+
+    .design-kiev-wrapper{
+        margin-top: calc(var(--spacing)*0); ;
+        display:block
+    }
+
+    .design-bg{
+        display: none;
+    }
+
+    .design-content-img1{
+        width: 100%;
+    
+    }
+
+    .design-content-img2{
+        width: 100%;
+        flex-direction: column;
+    
+    }
+
+    .design-content-img2 img{
+        width: 100%;
+    }
+
     /* About Page*/
 
     .mobile-col-979{
@@ -1236,6 +1471,34 @@ ul.text-privacy li {
         opacity: 0;
         transition: max-height 0.4s ease, opacity 0.3s ease;
       }
+
+    /* Kiev */
+    .design-text-wrapper video{
+        max-width: 80%;
+        height: 60%;
+        object-fit: cover;
+        padding-bottom: calc(var(--spacing)*25) ;
+    }
+    .design-text-wrapper{
+        margin-top: calc(var(--spacing)*50);
+     
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding-bottom: calc(var(--spacing)*25);
+    }
+
+    .design-text{
+        max-width: 500px;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .design-content-icons{
+        width: 100%;
+    }
+
 
 
     /* Work Page */
