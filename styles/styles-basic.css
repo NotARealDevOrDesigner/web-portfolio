@@ -31,13 +31,24 @@
 }
 
 .phyix-pb {
-    background-image: url("../pages/content/img/physics/physics-hero.png");
+    background-image: url("../pages/content/img/physics/physics-problem.png");
 }
 
-.phyix-pb-mb {
-    background-image: url("../pages/content/img/physics/physics-hero.png");
+.phyix-over-pb{
+    background-image: url("../pages/content/img/physics/physics-problem-over.png");
 }
 
+.phyix-db {
+    background-image: url("../pages/content/img/physics/physics-design.png");
+}
+
+.phyix-sb1 {
+    background-image: url("../pages/content/img/physics/physics-solution1.png");
+}
+
+.phyix-sb2 {
+    background-image: url("../pages/content/img/physics/physics-solution2.png");
+}
 
 .cs-plain{
     width: 100%;
@@ -45,6 +56,7 @@
 }
 
 .cs-plain-bg{
+    position: relative;
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -56,9 +68,28 @@
     display: none;
 }
 
+.cs-plain-mobile-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;      /* Füllt den Container, kann beschneiden */
+    background-position: center; /* Zentriert das Bild */
+    background-repeat: no-repeat;
+}
+
 .cs-plain-heading{
     padding-top: calc(var(--spacing)*25);
     width: 100%;
+}
+
+.hd-right{
+    text-align: end;
+}
+
+.m-top{
+    padding-top: calc(var(--spacing)*25);
 }
 
 .cs-plain-heading h2{
@@ -67,6 +98,7 @@
 }
 
 .cs-plain-content{
+    position: relative;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -80,6 +112,17 @@
     padding-bottom: calc(var(--spacing)*25);
 }
 
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.txt-left{
+    text-align: left !important;
+}
+
 
 .cs-plain-text{
     text-align: right;
@@ -91,7 +134,33 @@
     font-size: 24px ;
 }
 
+
+/*content section (cs) extras */
+
+.cs-extra-img-over-bg{
+    display: block;
+    position: absolute;
+    margin-top: calc(var(--spacing)*25);
+    right: calc(var(--spacing)*6);
+    width: 400px; /* oder kleiner, z.B. 50% */
+    height: 50%;
+    z-index: 1;
+    background-size: cover;
+}
+
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+
 @media(max-width:480px){
+
+    .hd-right{
+        text-align: left;
+    }
+
     .cs-plain-heading {
         padding-top: calc(var(--spacing)*12);
         width: 100%;
@@ -108,9 +177,19 @@
         text-align: left;
         max-width: 100%;
     }
+
+    .cs-plain-text h2{
+        white-space: wrap;
+        font-weight: 400;
+        font-size: 24px ;
+    }
 }
 
 @media(max-width:979px){
+    .m-top{
+        padding-top: calc(var(--spacing)*4);
+    }
+
     .cs-plain{
         width: 100%;
         height: fit-content;
@@ -124,11 +203,14 @@
     .cs-plain-mobile-bg-wrapper{
         margin-top: calc(var(--spacing)*6);
         display: block;
+        position: relative;
         width: 100%;
-        padding-top: 56.25%; /* Für 16:9 — 9 / 16 * 100 */
-        background-image: url("../pages/content/img/physics/physics-hero.png");
-        background-size: cover;
+        aspect-ratio: 16 / 9; /* oder padding-top: 56.25% */
+        overflow: hidden;
         margin-bottom: calc(var(--spacing)*12);
     }
 
+    .cs-extra-img-over-bg{
+        display: none;
+    }
 }
