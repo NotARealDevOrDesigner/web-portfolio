@@ -27,27 +27,27 @@
 
 .phyix-bg {
 
-    background-image: url("../pages/content/img/physics/physics-hero.png");
+    background-image: url("../pages/content/img/physics/physics-hero.jpg");
 }
 
 .phyix-pb {
-    background-image: url("../pages/content/img/physics/physics-problem.png");
+    background-image: url("../pages/content/img/physics/physics-problem.jpg");
 }
 
 .phyix-over-pb{
-    background-image: url("../pages/content/img/physics/physics-problem-over.png");
+    background-image: url("../pages/content/img/physics/physics-problem-over.jpg");
 }
 
 .phyix-db {
-    background-image: url("../pages/content/img/physics/physics-design.png");
+    background-image: url("../pages/content/img/physics/physics-design.jpg");
 }
 
 .phyix-sb1 {
-    background-image: url("../pages/content/img/physics/physics-solution1.png");
+    background-image: url("../pages/content/img/physics/physics-solution1.jpg");
 }
 
 .phyix-sb2 {
-    background-image: url("../pages/content/img/physics/physics-solution2.png");
+    background-image: url("../pages/content/img/physics/physics-solution2.jpg");
 }
 
 .cs-plain{
