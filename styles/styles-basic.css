@@ -1,0 +1,134 @@
+/* Content */
+
+.kiev-bg {
+    background-image: url('../pages/content/img/kiev/hero-section.jpg');
+}
+
+.kiev-pb{
+    background-image: url('../pages/content/img/kiev/problem-section.png');
+}
+
+
+.kiev-sc1{
+    background-image: url('../pages/content/img/kiev/solution-sectionbg1.png');
+}
+
+.kiev-sc2{
+    background-image: url('../pages/content/img/kiev/solution-sectionbg2.png');
+}
+
+.kiev-sc3{
+    background-image: url('../pages/content/img/kiev/solution-sectionbg3.png');
+}
+
+.kiev-bg-color{
+    background-color: #000;
+}
+
+.phyix-bg {
+
+    background-image: url("../pages/content/img/physics/physics-hero.png");
+}
+
+.phyix-pb {
+    background-image: url("../pages/content/img/physics/physics-hero.png");
+}
+
+.phyix-pb-mb {
+    background-image: url("../pages/content/img/physics/physics-hero.png");
+}
+
+
+.cs-plain{
+    width: 100%;
+    height: 100vh;
+}
+
+.cs-plain-bg{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: bottom;
+    z-index: -2;
+}
+
+.cs-plain-mobile-bg-wrapper{
+    display: none;
+}
+
+.cs-plain-heading{
+    padding-top: calc(var(--spacing)*25);
+    width: 100%;
+}
+
+.cs-plain-heading h2{
+    font-weight: 400;
+    font-size: 32px ;
+}
+
+.cs-plain-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.cs-plain-text-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: calc(var(--spacing)*25);
+}
+
+
+.cs-plain-text{
+    text-align: right;
+    max-width: 400px;
+}
+
+.cs-plain-text h2{
+    font-weight: 400;
+    font-size: 24px ;
+}
+
+@media(max-width:480px){
+    .cs-plain-heading {
+        padding-top: calc(var(--spacing)*12);
+        width: 100%;
+    }
+
+    .cs-plain-text-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-bottom: calc(var(--spacing)*12);
+    }
+
+    .cs-plain-text{
+        text-align: left;
+        max-width: 100%;
+    }
+}
+
+@media(max-width:979px){
+    .cs-plain{
+        width: 100%;
+        height: fit-content;
+    }
+
+    .bg-mb-none{
+        background-image: none;
+        background-color: white;
+    }
+
+    .cs-plain-mobile-bg-wrapper{
+        margin-top: calc(var(--spacing)*6);
+        display: block;
+        width: 100%;
+        padding-top: 56.25%; /* Für 16:9 — 9 / 16 * 100 */
+        background-image: url("../pages/content/img/physics/physics-hero.png");
+        background-size: cover;
+        margin-bottom: calc(var(--spacing)*12);
+    }
+
+}

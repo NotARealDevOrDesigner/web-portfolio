@@ -541,6 +541,11 @@ nav svg {
 }
 
 /* Project Sites */
+
+.mobile-img-switch{
+    display: none;
+}
+
 .flex-col{
     display: flex;
     flex-direction: column;
@@ -1396,7 +1401,40 @@ ul.text-privacy li {
 
 @media(max-width:979px){
 
+
+
     /* Kiev */
+
+
+
+    .mobile-bg-none{
+        background-image: none;
+    }
+
+    .mobile-img-switch{
+        background-color: red;
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-height: 800px !important;
+        margin-bottom: calc(var(--spacing)*6);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+
+
+    }
+
+    .kiev-pb-mobile{
+        background-image: url('../pages/content/img/kiev/problem-section.png');
+
+    }
+
+    .kiev-sc1-mobile{
+        background-image: url('../pages/content/img/kiev/solution-sectionbg1.png');
+    }
+
+
     .design-content-icons{
         max-width: 500px;
     }
