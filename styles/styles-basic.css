@@ -49,6 +49,9 @@ h3{
 }
 
 
+.link-white{
+    color: var(--color-font-white) !important;
+}
 
 .bg-white{
     background-color: var(--color-bg-white);
@@ -56,6 +59,14 @@ h3{
 
 .bg-black{
     background-color: var(--color-bg-black);
+}
+
+.icon-white{
+    fill: var(--color-font-white);
+}
+
+.icon-black{
+    fill: var(--color-font-black);
 }
 
 
@@ -92,9 +103,7 @@ h3{
     color: var(--color-font-white);
 }
 
-.theme-dark svg{
-    fill: var(--color-font-white);
-}
+
 
 .theme-dark .scroll-down{
     border-color: var(--color-font-white);
@@ -116,9 +125,6 @@ h3{
     color: var(--color-font-black);
 }
 
-.theme-light svg{
-    fill: var(--color-font-black);
-}
 
 .theme-light .scroll-down{
     border-color: var(--color-font-black);
@@ -200,6 +206,27 @@ h3{
 .rues-bg{
     background-image: url("../pages/content/img/ruesgar/ruesgar-hero.jpg");
 }
+
+.cyber-bg{
+    background-image: url("../pages/content/img/cyber/cyber-hero.jpg");
+}
+
+.cyber-ib{
+    background-image: url("../pages/content/img/cyber/cyber-idea.jpg");
+}
+
+.cyber-md{
+    background-image: url("../pages/content/img/cyber/cyber-map.jpg");
+}
+
+.cyber-md2{
+    background-image: url("../pages/content/img/cyber/cyber-map2.jpg");
+}
+
+.cyber-el{
+    background-image: url("../pages/content/img/cyber/cyber-element.jpg");
+}
+
 .cs-plain{
     width: 100%;
     height: 100vh;
@@ -499,6 +526,10 @@ h3{
     width: 300px;
 }
 
+.font-white a{
+    color: var(--color-font-white);
+}
+
 .cs-link-url a{
     text-decoration: underline;
     color: var(--color-font-black);
@@ -544,6 +575,14 @@ h3{
   
 
 @media(max-width:480px){
+
+    .nav-mb-white{
+        color: var(--color-font-white);
+    }
+
+    .nav-mb-black{
+        color: var(--color-font-black) !important;
+    }
 
     .cs-still-slider-track {
 
@@ -765,9 +804,23 @@ h3{
         height: fit-content;
     }
 
+ 
+
     .bg-mb-none{
         background-image: none;
-        background-color: white;
+    }
+
+    .bg-mb-dark{
+        background-color: var(--color-bg-black);
+    }
+
+    .bg-mb-extra-dark{
+        background-color: black !important;
+
+    }
+
+    .bg-mb-white{
+        background-color: var(--color-bg-white);
     }
 
     .cs-plain-mobile-bg-wrapper{

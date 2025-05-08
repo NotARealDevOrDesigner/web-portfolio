@@ -295,9 +295,7 @@ nav a{
 
 }
 
-nav svg {
-    fill: var(--color-font-black);
-}
+
 
 .scroll-down{
     position: absolute;
