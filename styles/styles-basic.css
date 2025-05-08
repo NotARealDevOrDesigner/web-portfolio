@@ -479,7 +479,7 @@ h3{
     height: 100%;
 }
 
-
+/*content section (cs) link */
 
 .cs-links-content-wrapper{
     height: fit-content;
@@ -504,8 +504,60 @@ h3{
     color: var(--color-font-black);
 }
 
+/*content section (cs) still */
+
+
+  
+
+.cs-still-slider-container {
+    width: 100%;
+    height: 65vh;
+    overflow: hidden;
+  }
+  
+  .cs-still-slider-track {
+    display: flex;
+    width: fit-content; 
+    height: 100%;
+    animation: scroll 30s linear infinite;
+  }
+  
+  .cs-still-slider-img {
+    flex: 0 0 auto; /* je Slide 50% von 200% = 100% Viewport */
+    height: 100%;
+  }
+  
+  .cs-still-slider-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
 
 @media(max-width:480px){
+
+    .cs-still-slider-track {
+
+        animation: scroll 10s linear infinite;
+      }
+
+    @keyframes scroll {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-300%);
+        }
+      }
 
     .cs-learnings-element-wrapper{
         margin-bottom: 0;
