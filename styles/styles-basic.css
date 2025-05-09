@@ -61,6 +61,10 @@ h3{
     background-color: var(--color-bg-black);
 }
 
+.bg-extra-black{
+    background-color: black;
+}
+
 .icon-white{
     fill: var(--color-font-white);
 }
@@ -244,7 +248,7 @@ h3{
 }
 
 .haptic-ba2{
-    background-image: url("../pages/content/img/haptic/haptic-ba2.jpg");
+    background-image: url("../pages/content/img/haptic/haptic-ba2\(big\).jpg");
 }
 
 .cs-plain{
