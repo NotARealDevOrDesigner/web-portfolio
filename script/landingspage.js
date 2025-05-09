@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "theme-light",
         "theme-dark",
         "theme-light",
-        "theme-light"
+        "theme-dark"
     ];
 
     const fallbackImages = [
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "pages/content/video/fallback-video2.webp",
         "pages/content/video/fallback-video3.webp",
         "pages/content/video/fallback-video4.webp",
-        "pages/content/video/fallback-video5.webp"
+        "pages/content/video/fallback-video5.jpg"
       ];
     
 
