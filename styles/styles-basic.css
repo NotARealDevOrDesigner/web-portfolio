@@ -227,6 +227,26 @@ h3{
     background-image: url("../pages/content/img/cyber/cyber-element.jpg");
 }
 
+.haptic-bg{
+    background-image: url("../pages/content/img/haptic/haptic-hero.jpg");
+}
+
+.haptic-wb{
+    background-image: url("../pages/content/img/haptic/haptic-work.jpg");
+}
+
+.haptic-wb2{
+    background-image: url("../pages/content/img/haptic/haptic-work2.jpg");
+}
+
+.haptic-ba1{
+    background-image: url("../pages/content/img/haptic/haptic-ba1.jpg");
+}
+
+.haptic-ba2{
+    background-image: url("../pages/content/img/haptic/haptic-ba2.jpg");
+}
+
 .cs-plain{
     width: 100%;
     height: 100vh;
