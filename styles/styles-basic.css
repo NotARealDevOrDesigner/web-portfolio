@@ -1,7 +1,7 @@
 /* PreSets */
 
 :root{
-
+    
     --spacing: 0.25rem;
 
     --font-display: "Roboto", "sans-serif";
@@ -13,6 +13,11 @@
     --color-bg-white:oklch(0.99 0 0);
     --color-bg-black:oklch(0.14 0 0);
     --color-bg-deep-black:oklch(0 0 0);
+
+        /* cookie */
+    --cc-btn-primary-color: rgb(255, 255, 255);
+    --cc-btn-primary-bg: rgb(24, 24, 24);
+
 }
 
 *{
@@ -533,12 +538,11 @@ h3{
 }
 
 .cs-video-wrapper{
-
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
     overflow: hidden;
-    background-color: black;
+    background-color: rgb(52, 52, 52);
     margin-bottom: calc(var(--spacing)*25);
 }
 
@@ -548,6 +552,22 @@ h3{
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/* youtube cookie banner */
+.yt-placeholder {
+    display: flex;
+    text-align: center;
+    padding-top: 30%;
+    padding-left: calc(var(--spacing)*4);
+    padding-right: calc(var(--spacing)*4);
+    justify-content: center;
+}
+
+.yt-blocked-msg p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--color-font-white);
 }
 
 /*content section (cs) link */
@@ -721,6 +741,8 @@ h3{
         max-width: 100%;
     }
  
+
+
 @media(max-width:480px){
 
     .cs-flex-icon1{
@@ -1070,3 +1092,6 @@ h3{
         background-position: right;
     }
 }
+
+
+

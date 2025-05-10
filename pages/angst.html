@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js" defer></script>
+
     <link rel="stylesheet" href="../styles/style.css"> 
+    <link rel="stylesheet" href="../styles/cookieconsent.css"> 
     <link rel="stylesheet" href="../styles/styles-basic.css"> 
+    
     <title>Angst | Lukas Predan</title>
  
 </head>
@@ -58,11 +63,13 @@
                 </div>
 
                 <div class="cs-video-wrapper">
-                    <div class="cs-video-element" role="video" aria-label="video shows ruesgar brand">
-                        <iframe src="https://www.youtube.com/embed/IqAn-DGeqZE?si=qEM4TryFX5h0etZr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>          
+                        <div class="cs-video-element yt-placeholder" role="video" aria-label="video shows creative video about anxiety disorder" data-yt-id="IqAn-DGeqZE">
+                            <div class="yt-blocked-msg">
+                                <p>This video is blocked until you accept YouTube cookies.</p>
+                        </div>
                     </div>
-
                 </div>
+
                 <div class="cs-plain-text-wrapper">
                     <div class="cs-plain-text">
                         <h2>awareness & storytelling</h2>
@@ -153,6 +160,7 @@
 
 
     <!--   ***** scripts *****   -->
+    <script type="module" defer src="../script/cookieconsent-config.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
