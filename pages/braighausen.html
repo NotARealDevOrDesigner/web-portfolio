@@ -1,49 +1,152 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js" defer></script>
 
     <link rel="stylesheet" href="../styles/style.css"> 
     <link rel="stylesheet" href="../styles/cookieconsent.css"> 
     <link rel="stylesheet" href="../styles/styles-basic.css"> 
-    
+
+    <meta name="description" content="UX improvement project for an interactive science museum exhibit, focusing on clearer guidance, accessibility, and engaging user interaction.">
+
+    <title>Braighausen | Lukas Predan</title>
+ 
 </head>
-
 <body>
+    <header>
+        <nav class="font-black icon-black">
+            <a href="../index.html" class="link-home font-white">lukas predan</a>
 
-        <div class="cs-video font-white bg-extra-black bg-mb-extra-dark">
-            <div class="cs-video-content-wrapper max1200">
-                <div class="cs-learnings-heading">
-                    <h2>video</h2>
-                </div>
+            <input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="open-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </label>
 
-
-                    <div class="cs-video-wrapper">
-                        <div class="cs-video-element yt-placeholder" data-yt-id="rpp29SeZrck">
-                            <div class="yt-blocked-msg">
-                                <p>This video is blocked until you accept YouTube cookies.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cs-video-wrapper">
-                        <div class="cs-video-element yt-placeholder" data-yt-id="VY2Vm_9u2dk">
-                            <div class="yt-blocked-msg">
-                                <p>This video is blocked until you accept YouTube cookies.</p>
-                        </div>
-                    </div>
-                </div>
+            <label id="overlay" for="sidebar-active"></label>
 
 
+            <div class="links-container bg-mobile-white">
+                <label for="sidebar-active" class="close-sidebar-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                </label>
+
+                <a href="work.html" aria-current="page" class="link">work</a>
+                <a href="about.html" class="link" >about</a>
+                <a href="mailto:lukaspredan@gmail.com" class="link contact">contact</a>
             </div>
+        </nav>
+    </header>
+
+
+
+    <main class="flex-col">
+        <div class="cs-hero-section">
+            <div class="cs-hero-bg braig-bg" role="img" aria-label="image which explains the new version of the museum exhibit"></div>
+                <div class="cs-hero-content braig-h max1200">
+                    <h1>braighausen</h1>
+                        <h3>Website and corporate Design for an Event Location</h3>
+                        <div class="cs-hero-category">
+                            <p>[UI Design] [2023]</p>
+                        </div>
+                </div>
+        </div>
+
+        <div class="cs-h-overlay">
+            <img src="../pages/content/img/braighausen/braig-h-overlay.png" alt="">
+        </div>
+
+        <div class="cs-huge-container">
+
+            <div class="cs-huge-small pt-50 max1200">
+
+                    <div class="cs-plain-heading font-black ">
+                        <h2>idea</h2>
+                    </div>
+
+                    <div class="cs-plain-text-wrapper left">
+                        <div class="cs-plain-text txt-left font-black">
+                            <h2>corporate design & accessibility</h2>
+                            <p>Lorem ipsum dolor sit amet dumcum consectetur. Leo nulla sagittis nulla sed ac. Sed luctus diam tellus feugiat quam amet vulputate. Ut at quis risus id arcu.  Posuere sed odio egestas purus posuere curabitur lectus. Lorem ipsum dolor sit amet dumcum consectetur. Leo nulla sagittis nulla sed ac.</p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="cs-huge-medium pt-25 pb-25 max1200">
+                <div class="cs-plain-heading hd-right font-black ">
+                    <h2>elements</h2>
+                </div>
+
+            <img src="../pages/content/img/braighausen/braig-medium.png" alt="">
+            </div>
+
+            <div class="cs-huge-medium pt-25 pb-50 max1200">
+                <div class="cs-plain-heading font-black ">
+                    <h2>design</h2>
+                </div>
+
+            <img src="../pages/content/img/braighausen/braig-medium2.png" alt="">
+            </div>
+
+            <div class="cs-huge-medium pt-50 ">
+ 
+            <img src="../pages/content/img/braighausen/braig-medium3.png" alt="">
+            </div>
+            
+
         </div>
 
 
+        <div class="cs-links">
+            <div class="cs-links-content-wrapper max1200">
+                <div class="cs-learnings-heading">
+                    <h2>links</h2>
+                </div>
 
-<script type="module" defer src="../script/cookieconsent-config.js"></script>
+                <div class="cs-links-wrapper">
+                    <div class="cs-link">
+                        <div class="cs-link-src">
+                            <p>website:</p>
+                        </div>
+                        <div class="cs-link-url">
+                            <p>
+                                <a href="https://www.braighausen.de/" target="_blank">https://www.braighausen.de/</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+   
+
+    <footer class="footer theme-white">
+        <div class="footer-content">
+            <p> built by lukas predan</p>
+            <div class="footer-links">
+                <a href="https://de.linkedin.com/in/lukas-predan-b29b57201" target="_blank">linkedin</a>
+                <a href="mailto:lukaspredan@gmail.com">email</a>
+                <a href="/pages/privacy.html">privacy</a>
+                <a href="/pages/imprint.html">imprint</a>
+    
+            </div>
+        </div>
+    </footer>
+
+
+    <!--   ***** scripts *****   -->
+    <script type="module" defer src="../script/cookieconsent-config.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
 </body>
 </html>
+
