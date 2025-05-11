@@ -1,5 +1,11 @@
 /* PreSets */
 
+.lazy-bg {
+  background-color: #111; /* placeholder */
+  background-size: cover;
+  background-position: center;
+}
+
 :root{
     
     --spacing: 0.25rem;
@@ -188,20 +194,20 @@ h3{
 }
 
 .kiev-pb{
-    background-image: url('../pages/content/img/kiev/problem-section.png');
+    background-image: url('../pages/content/img/kiev/problem-section.jpg');
 }
 
 
 .kiev-sc1{
-    background-image: url('../pages/content/img/kiev/solution-sectionbg1.png');
+    background-image: url('../pages/content/img/kiev/solution-sectionbg1.jpg');
 }
 
 .kiev-sc2{
-    background-image: url('../pages/content/img/kiev/solution-sectionbg2.png');
+    background-image: url('../pages/content/img/kiev/solution-sectionbg2.jpg');
 }
 
 .kiev-sc3{
-    background-image: url('../pages/content/img/kiev/solution-sectionbg3.png');
+    background-image: url('../pages/content/img/kiev/solution-sectionbg3.jpg');
 }
 
 .kiev-bg-color{
