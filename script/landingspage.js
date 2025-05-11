@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const videos = [
-      "pages/content/video/video1.webm",
+      "pages/content/video/video1.mp4",
       "pages/content/video/video2.mp4",
       "pages/content/video/video3.mp4",
       "pages/content/video/video4.webm",
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "theme-dark",
         "theme-light",
         "theme-dark",
-        "theme-light",
+        "theme-dark",
         "theme-dark"
     ];
 
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "pages/content/video/fallback-video1.jpg",
         "pages/content/video/fallback-video2.webp",
         "pages/content/video/fallback-video3.webp",
-        "pages/content/video/fallback-video4.webp",
+        "pages/content/video/fallback-video4.jpg",
         "pages/content/video/fallback-video5.jpg"
       ];
     
