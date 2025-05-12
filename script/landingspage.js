@@ -7,13 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "pages/content/video/video5.webm"
     ];
 
-    const links = [
-      'pages/kiev.html',
-      'pages/feelphysics.html',
-      'pages/cyber.html',
-      'pages/haptic.html',
-      'pages/angst.html'
-    ]
 
 
     const counter = [
@@ -23,6 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
         "4 | 5",
         "5 | 5",
     ];
+
+    const links = [
+      'pages/kiev.html',
+      'pages/feelphysics.html',
+      'pages/cyber.html',
+      'pages/haptic.html',
+      'pages/angst.html'
+    ]
+
 
     const themes = [
         "theme-dark",
