@@ -64,6 +64,10 @@ h3{
     color: var(--color-font-white) !important;
 }
 
+.bg-pink-white{
+    background-color: #F8F2F2;
+}
+
 .bg-white{
     background-color: var(--color-bg-white);
 }
@@ -790,16 +794,41 @@ h3{
     }
 
     .cs-huge-medium img{
-        width: 100%;
+        width: 90%;
     }
+
+
 
     .cs-huge-medium-plus{
-        height: 600px;
+        height: 900px;
+    }
+
+    .img-huge{
+        max-width: 100%;
+    }
+
+    .cs-plain-img-huge{
+        height: fit-content !important;
+    }
+
+@media(max-width:480px){
+
+    .cs-h-overlay{
+        position: absolute;
+        left: 0;
+        top: 6;
+        z-index: 3;
+        max-width: 100% !important;
+        overflow: hidden;
+    }
+
+    .cs-h-overlay img{
+        position: relative;
+        left: -80px;
+        width: 80%;
     }
 
 
-
-@media(max-width:480px){
 
     .cs-flex-icon1{
         max-width: 50% !important;
@@ -904,6 +933,17 @@ h3{
 
 @media(max-width:700px){
 
+    .braig-md3{
+    background-image: url("../pages/content/img/braighausen/braig-medium3-mobile.png");
+    background-size: cover;
+    }
+
+    .cs-huge-medium-plus{
+        height: 400px;
+    }
+
+
+
     .cs-plain-heading{
         margin-top:calc(var(--spacing)*25);
     }
@@ -956,9 +996,6 @@ h3{
         background-position: bottom;
         z-index: -2;
     }
-
-
-
 
     .cs-learnings-element-wrapper{
         display: flex !important;
@@ -1137,6 +1174,14 @@ h3{
     }
 
 }
+
+@media(max-width:1200px){
+    
+
+
+}
+    
+
 
 @media(max-width:2000px){
     .cs-extra-img-over-bg{
