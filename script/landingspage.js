@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       'pages/kiev.html',
       'pages/feelphysics.html',
       'pages/cyber.html',
-      'pages/nuilab.html',
+      'pages/haptic.html',
       'pages/angst.html'
     ]
 
