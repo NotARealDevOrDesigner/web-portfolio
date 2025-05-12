@@ -430,6 +430,8 @@ h3{
     z-index: -2;
 }
 
+
+
 .cs-hero-content{
     position: relative;;
     width: 100%;
@@ -813,6 +815,8 @@ h3{
 
 @media(max-width:480px){
 
+
+
     .cs-h-overlay{
         position: absolute;
         left: 0;
@@ -825,7 +829,7 @@ h3{
     .cs-h-overlay img{
         position: relative;
         left: -80px;
-        width: 80%;
+        width: 80% !important;
     }
 
 
@@ -933,6 +937,10 @@ h3{
 
 @media(max-width:700px){
 
+ .braig-hero{
+    height: 70vh !important;
+}
+
     .braig-md3{
     background-image: url("../pages/content/img/braighausen/braig-medium3-mobile.png");
     background-size: cover;
@@ -1005,6 +1013,21 @@ h3{
 }
 
 @media(max-width:979px){
+
+    .cs-h-overlay{
+        position: absolute;
+        left: 0;
+        top: 6;
+        z-index: 3;
+        width: 100% !important;
+        overflow: hidden;
+    }
+
+    .cs-h-overlay img{
+        position: relative;
+        left: 0px;
+        max-width:100% !important;
+    }
 
     .cs-flex-icons{
         max-width: 100% !important;
@@ -1175,9 +1198,22 @@ h3{
 
 }
 
-@media(max-width:1200px){
+@media(max-width:1700px){
     
+    .cs-h-overlay{
+        position: absolute;
+        left: 0;
+        top: 6;
+        z-index: 3;
+        max-width: 100% !important;
+        overflow: hidden;
+    }
 
+    .cs-h-overlay img{
+        position: relative;
+        left: 0px;
+        width:60vw;
+    }
 
 }
     
