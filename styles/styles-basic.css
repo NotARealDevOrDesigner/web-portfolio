@@ -300,6 +300,11 @@ h3{
     background-image: url("../pages/content/img/braighausen/braig-medium.png");
 }
 
+.braig-md3{
+    background-image: url("../pages/content/img/braighausen/braig-medium3.png");
+    background-size: cover;
+}
+
 .cs-plain{
     width: 100%;
     height: 110vh;
@@ -758,13 +763,16 @@ h3{
     .cs-h-overlay{
         position: absolute;
         left: 0;
-        top: 10;
+        top: 6;
         z-index: 3;
         max-width: 100% !important;
+        overflow: hidden;
     }
 
     .cs-h-overlay img{
-        width: 100%;
+        position: relative;
+        left: 0px;
+        width: 80%;
     }
 
 
@@ -783,6 +791,10 @@ h3{
 
     .cs-huge-medium img{
         width: 100%;
+    }
+
+    .cs-huge-medium-plus{
+        height: 600px;
     }
 
 
