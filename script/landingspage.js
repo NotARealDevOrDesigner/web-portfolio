@@ -77,10 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Setze das erste Video sofort beim Laden der Seite
     const firstSource = document.createElement("source");
     firstSource.src = videos[index];
-    firstSource.type = "video/webm";
-    video.innerHTML = "";  // Entferne alte Quellen (falls vorhanden)
-    video.appendChild(firstSource);  // Füge das erste Video hinzu
-    video.poster = fallbackImages[index];  // Dynamisch das Poster-Bild setzen
+    firstSource.type = videos[index].endsWith('.webm') ? "video/webm" : "video/mp4";
+    video.innerHTML = "";
+    video.appendChild(firstSource);
+    video.poster = fallbackImages[index];
     video.muted = true;
     video.load();
     video.oncanplay = () => {
@@ -88,11 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
         console.warn("Autoplay fehlgeschlagen:", err);
       });
     };
-    
-    //debug
-    const v = document.querySelector('#bgVideo');
-    v.muted = true;
-    v.play().catch(e => console.log('Fehler beim Play:', e));
     
     // Setze den ersten Text sofort nach dem Laden der Seite
     headline.textContent = headlines[index];
@@ -145,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         const newSource = document.createElement("source");
         newSource.src = videos[newIndex];
-        newSource.type = "video/webm";
+        newSource.type = videos[newIndex].endsWith('.webm') ? "video/webm" : "video/mp4";
   
         video.innerHTML = ""; // Entfernt alte Quellen
         video.appendChild(newSource);

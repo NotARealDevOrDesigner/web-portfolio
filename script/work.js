@@ -1,104 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const checkbox = document.getElementById("filter-active");
-  const filterLinks = document.querySelector(".filter-links");
-  const filterTabOut = document.querySelector(".filter-tab-out");
-  const mobileFilter = document.querySelector(".mobile-category-filter");
-  const mediaQuery = window.matchMedia("(max-width: 1050px)");
-  
 
-  let flipped = true;
-
-  function flipIcon() {
-    const icon = document.querySelector('.category-svg');
-    flipped = !flipped;
-  
-    icon.style.transition = 'transform 0.3s ease';
-    icon.style.transform = flipped ? 'rotate(180deg)' : 'rotate(0deg)';
-  }
-
-  function toggleDropdown() {
-    if (checkbox.checked) {
-      filterLinks.style.maxHeight = filterLinks.scrollHeight + "px";
-      filterLinks.style.opacity = 1;
-      flipIcon();
-      
-      if (filterTabOut) {
-        filterTabOut.style.display = "inline";
-      }
-      
-    } else {
-      filterLinks.style.maxHeight = "0px";
-      filterLinks.style.opacity = 0;
-      flipIcon();
-   
-      if (filterTabOut) {
-        filterTabOut.style.display = "none";
-      }
-
+    // Nav scroll effect — adds .scrolled class to header
+    const header = document.querySelector("header");
+    if (header) {
+        window.addEventListener("scroll", () => {
+            header.classList.toggle("scrolled", window.scrollY > 10);
+        }, { passive: true });
     }
-  }
 
-  function handleMediaQuery(e) {
-    if (e.matches) {
-      checkbox.addEventListener("change", toggleDropdown);
-      toggleDropdown();
-
-      if (filterTabOut) {
-        filterTabOut.addEventListener("click", () => {
-          checkbox.checked = false;
-          toggleDropdown();
-        });
-      }
-    } else {
-      checkbox.removeEventListener("change", toggleDropdown);
-      filterLinks.style.maxHeight = "";
-      filterLinks.style.opacity = "";
-
-      if (filterTabOut) {
-        filterTabOut.style.display = "";
-      }
-    }
-  }
-
-  handleMediaQuery(mediaQuery);
-  mediaQuery.addEventListener("change", handleMediaQuery);
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
+    // Filter with staggered card animation
     const filterButtons = document.querySelectorAll(".filter-link");
     const items = document.querySelectorAll(".card-item");
-  
+
     filterButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        const filterValue = button.getAttribute("data-filter");
-  
-        // Aktive Klasse setzen
-        filterButtons.forEach(btn => btn.classList.remove("active"));
-        button.classList.add("active");
-  
-        // 1. Alle ausblenden (mit animation)
-        items.forEach(item => {
-          item.classList.add("hide");
+        button.addEventListener("click", () => {
+            const filterValue = button.getAttribute("data-filter");
+
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            // Fade out all
+            items.forEach(item => item.classList.add("hide"));
+
+            setTimeout(() => {
+                let delay = 0;
+                items.forEach(item => {
+                    const matches = filterValue === "*" ||
+                        item.classList.contains(filterValue.slice(1));
+
+                    if (matches) {
+                        item.style.display = "block";
+                        item.style.transitionDelay = `${delay}ms`;
+                        requestAnimationFrame(() => item.classList.remove("hide"));
+                        delay += 45;
+                    } else {
+                        item.style.display = "none";
+                        item.style.transitionDelay = "";
+                    }
+                });
+            }, 280);
         });
-  
-        // 2. Nach Animation (z. B. 300ms) – nur passende anzeigen
-        setTimeout(() => {
-          items.forEach(item => {
-            // zuerst komplett aus dem Layout
-            item.style.display = "none";
-  
-            const matchesFilter = filterValue === "*" || item.classList.contains(filterValue.slice(1));
-  
-            if (matchesFilter) {
-              item.style.display = "block"; // kommt ins Layout
-              requestAnimationFrame(() => {
-                item.classList.remove("hide"); // fade-in
-              });
-            }
-          });
-        }, 300); // Timing = CSS-Transition-Time
-      });
     });
-  });
-  
+});
