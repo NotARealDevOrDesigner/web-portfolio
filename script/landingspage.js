@@ -4,17 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
       "pages/content/video/video2.mp4",
       "pages/content/video/video3.mp4",
       "pages/content/video/video4.webm",
-      "pages/content/video/video5.webm"
     ];
 
-
-
     const counter = [
-        "1 | 5",
-        "2 | 5",
-        "3 | 5",
-        "4 | 5",
-        "5 | 5",
+        "1 | 4",
+        "2 | 4",
+        "3 | 4",
+        "4 | 4",
     ];
 
     const links = [
@@ -22,16 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
       'pages/feelphysics.html',
       'pages/cyber.html',
       'pages/haptic.html',
-      'pages/angst.html'
-    ]
-
+    ];
 
     const themes = [
         "theme-dark",
         "theme-light",
         "theme-dark",
         "theme-dark",
-        "theme-dark"
     ];
 
     const fallbackImages = [
@@ -39,16 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
         "pages/content/video/fallback-video2.webp",
         "pages/content/video/fallback-video3.webp",
         "pages/content/video/fallback-video4.jpg",
-        "pages/content/video/fallback-video5.jpg"
       ];
-    
 
     const headlines = [
       "Kiev 60 L-Grip",
       "Feel Physics",
       "CyberEscape2077",
       "Work at Nuilab",
-      "Angst"
     ];
 
     const subheadlines = [
@@ -56,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "[UX Research & Design]",
       "[VR Game-Development]",
       "[Haptic Interaction & Bachelor-Thesis]",
-      "[Creative Director & DOP]"
     ];
 
 
